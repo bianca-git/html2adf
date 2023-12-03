@@ -1,0 +1,18 @@
+{
+  "name": "az-func-html2adf",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@atlaskit/adf-schema": "^35.1.0",
+    "@atlaskit/editor-jira-transformer": "^8.3.19",
+    "@atlaskit/editor-json-transformer": "^8.10.15",
+    "@azure/functions": "^4.0.0",
+    "jsdom": "^23.0.1"
+  },
+  "main": "src/functions/*.js"
+}
