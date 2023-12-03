@@ -1,13 +1,15 @@
-const { app } = require('@azure/functions');
+import { app } from '@azure/functions';
+import convertHtmlToADF from '../convertHtmlToADF.js';
 
 app.http('html2adf', {
-    methods: ['GET', 'POST'],
+    methods: ['POST'],
     authLevel: 'anonymous',
     handler: async (request, context) => {
-        context.log(`Http function processed request for url "${request.url}"`);
-
-        const name = request.query.get('name') || await request.text() || 'world';
-
-        return { body: `Hello, ${name}!` };
+        context.info(`Http function processed request for url "${request.url}"`);
+        const htmlInput = await request.json();
+        const adfOutput = JSON.parse(convertHtmlToADF(htmlInput.html));
+        const data = JSON.stringify({ id: htmlInput.id, adf: adfOutput });
+        context.info(`Http function returning data "${data}"`);
+        return { headers: { 'Content-Type': 'application/json' }, body: data }
     }
 });
