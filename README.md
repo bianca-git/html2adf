@@ -1,7 +1,0 @@
-This module converts HTML to Atlassian Document Format (ADF). It uses several libraries to accomplish this: `jsdom`, `@atlaskit/adf-schema`, `@atlaskit/editor-json-transformer`, and `@atlaskit/editor-jira-transformer`.
-- The `JSDOM` library is used to create a simulated browser environment in Node.js. This is necessary because the conversion process requires certain browser-specific global objects like `window`, `DOMParser`, `Node`, and `HTMLElement`. These objects are not available in a Node.js environment by default, so they are simulated using `JSDOM`.
-- The `@atlaskit/adf-schema` library provides the default schema for ADF. This schema is used to initialize a `JIRATransformer` object, which is responsible for converting HTML to ADF.
-- The `@atlaskit/editor-json-transformer` library provides a `JSONTransformer` object, which is used to convert ADF to JSON.
-- The `convertHtmlToADF` function is the main function in this module. It takes an HTML string as input, simulates a browser environment, converts the HTML to ADF using the `JIRATransformer`, converts the ADF to JSON using the `JSONTransformer`, and finally returns the JSON as a string.
-
-The `convertHtmlToADF` function could be used in a larger application to convert user-generated HTML content to a format that can be stored and manipulated more easily.
