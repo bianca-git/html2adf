@@ -4,7 +4,8 @@
   "description": "This code is part of an Azure Functions application that exposes an HTTP endpoint for converting HTML to Atlassian Document Format (ADF).",
   "type": "module",
   "scripts": {
-    "start": "func start"
+    "start": "func start",
+    "start:hostedvm": "node ./src/convertHtmlToADF.js"
   },
   "dependencies": {
     "@atlaskit/adf-schema": "^35.1.0",
