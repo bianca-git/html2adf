@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "func start",
-    "start:hostedvm": "node ./src/convertHtmlToADF.js"
+    "parse": "node ./src/command.js"
   },
   "dependencies": {
     "@atlaskit/adf-schema": "^35.1.0",

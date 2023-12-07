@@ -1,10 +1,13 @@
 import { Command } from 'commander';
-const program = new Command();
+const program = new Command()
+import convertHtmlToADF from './convertHtmlToADF.js';
+
 
 program
-  .option('-c, --cheese <type>', 'add the specified type of cheese', 'blue');
+  .option('-h, --html <HTML>', 'Insert HTML to be parsed here', '<h1>This is a test parsed variable, something is broken</h1>')
+  .parse(process.argv);
 
-  
-program.parse();
+const htmlinput = program.opts().html;
+const adfoutput = convertHtmlToADF(htmlinput);
 
-console.log(`cheese: ${program.opts().cheese}`);
+console.log(adfoutput);
