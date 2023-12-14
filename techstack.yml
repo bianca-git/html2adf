@@ -1,7 +1,7 @@
 repo_name: bianca-git/html2adf
-report_id: c51dbaefa81d6b47779eb8d624fd9dd5
+report_id: d4e374da0b310c6b303ecb2b3e590da5
 repo_type: Public
-timestamp: '2023-12-03T14:04:33+00:00'
+timestamp: '2023-12-14T13:24:51+00:00'
 requested_by: bianca-git
 provider: github
 branch: main
@@ -37,7 +37,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Headless Browsers
   image_url: https://img.stackshare.io/service/7054/preview.jpeg
-  detection_source_url: github.com/bianca-git/html2adf/blob/main/package-lock.json
+  detection_source_url: https://github.com/bianca-git/html2adf/blob/main/package-lock.json
   detection_source: package.json
   last_updated_by: Bianca W
   last_updated_on: 2023-12-03 12:37:18.000000000 Z
