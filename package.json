@@ -1,19 +1,21 @@
 {
-  "name": "az-func-html2adf",
+  "name": "html2adf",
   "version": "1.0.0",
-  "description": "This code is part of an Azure Functions application that exposes an HTTP endpoint for converting HTML to Atlassian Document Format (ADF).",
+  "description": "This is a console application that converts HTML to Atlassian Document Format (ADF).",
   "type": "module",
-  "scripts": {
-    "start": "func start",
-    "parse": "node ./src/command.js"
+  "bin":{
+    "html2adf": "./src/command.js"
   },
+  "keywords": [
+    "adf",
+    "html",
+    "converter"
+  ],
   "dependencies": {
     "@atlaskit/adf-schema": "^35.1.0",
     "@atlaskit/editor-jira-transformer": "^8.3.19",
     "@atlaskit/editor-json-transformer": "^8.10.15",
-    "@azure/functions": "^4.0.0",
     "commander": "^11.1.0",
     "jsdom": "^23.0.1"
-  },
-  "main": "src/functions/*.js"
+  }
 }
